@@ -1,0 +1,31 @@
+html {
+  height: 100vh; /* Adjust based on your requirement. */
+}
+
+body {
+  height: 1000vh; /* Enabling a long scroll effect. Adjust based on your requirement. */
+  background: #000;
+}
+
+/* Style the canvas element to be fixed at the center of the viewport */
+canvas {
+  position: fixed; /* Keeps the canvas in place while scrolling */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  max-width: 100vw; /* Ensure the canvas doesn’t exceed the viewport width */
+  max-height: 100vh; /* Ensure the canvas doesn’t exceed the viewport height */
+}
+
+/* STRAIGHT FROM THE LENIS DOCUMENTATION */
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
