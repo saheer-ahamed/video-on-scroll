@@ -45,8 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentFrame = (index) =>
     `./images/frame_${(index + 1).toString().padStart(4, "0")}.png`; // Generates paths like frame_0001.png
 
-  // Eg: try using this link: 
+  // Also: try using this link: 
   // `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${(index + 1).toString().padStart(4, "0")}.jpg`;
+
+
+  // Above I used array of images of a video
+  // If you want to convert your own video to image streams, follow this:
+  // 1. Open terminal 2. Go to your video file path  3. Enter this command: ffmpeg -i YOUR_VIDEO_NAME.mp4 -q:v 1 -vf "fps=30" [FOLDER_NAME]/frame_%04d.png
 
 
   // Array to store preloaded images
